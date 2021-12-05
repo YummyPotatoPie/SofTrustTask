@@ -1,0 +1,48 @@
+<div class="form-wrapper">
+  <div class="form-header">
+    <div class="form-title-wrapper">
+      <p class="form-title">Напишите нам!</p>
+    </div>
+  </div>
+  <div class="form-inputs-wrapper">
+    <form class="message-form">
+
+      <div class="form-input-wrapper">
+        <label class="form-input-label">Ваше имя: </label>
+        <input class="form-input" type="text" name="name" autocomplete="off" 
+            [placeholder]="errorPlaceHolders.nameErrorMessage"  [(ngModel)]="formValues.name">
+      </div>
+
+      <div class="form-input-wrapper">
+        <label class="form-input-label">Ваш Email: </label>
+        <input class="form-input" type="email" name="email" autocomplete="off"
+            [placeholder]="errorPlaceHolders.emailErrorMessage" [(ngModel)]="formValues.email">
+      </div>
+
+      <div class="form-input-wrapper">
+        <label class="form-input-label">Ваш телефон: </label>
+        <input class="form-input" type="tel" name="telephone" autocomplete="off" 
+            [placeholder]="errorPlaceHolders.telephoneErrorMessage" [(ngModel)]="formValues.telephone">
+      </div>
+
+      <div class="form-input-wrapper">
+        <label class="form-input-label">Тема: </label>
+        <select class="form-input" name="messageTheme" [(ngModel)]="formValues.messageTheme">
+          <option>Техподдержка</option>
+          <option>Продажи</option>
+          <option>Другое</option>
+        </select>
+      </div>
+
+      <div class="form-input-wrapper">
+        <label class="form-input-label">Ваше сообщение: </label>
+        <textarea class="form-textarea-input" name="message" [(ngModel)]="formValues.message"></textarea>
+      </div>
+      
+    </form>
+
+    <div class="form-input-wrapper">
+      <button class="send-button" (click)="sendForm()">Отправить письмо!</button>
+    </div>
+  </div> 
+</div>
