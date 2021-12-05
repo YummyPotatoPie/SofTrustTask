@@ -9,12 +9,14 @@ namespace SofTrustTask.Pages
         {
             int messageId = int.Parse(Request.Query["ID"]);
 
-            // Строка подключения 
+            // Г‘ГІГ°Г®ГЄГ  ГЇГ®Г¤ГЄГ«ГѕГ·ГҐГ­ГЁГї 
+            /*
             string connectionString = "";
             using SqlConnection connection = new(connectionString);
             SqlDataReader reader = new SqlCommand($"SELECT * FROM Messages WHERE ID = {messageId}", connection).ExecuteReader();
 
             if (reader.Read()) await Response.WriteAsync($"{reader["ID"]}, {reader["ThemeID"]}, {reader["ContactID"]}, {reader["Message"]}");
+            */
         }
     }
 }
